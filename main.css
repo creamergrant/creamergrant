@@ -287,6 +287,17 @@ main {
     text-decoration: underline;
 }
 
+.panel-block-content img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .panel-block-content img {
+        max-width: 50%;
+        max-height: fit-content;
+    }
+}
+
 .poster {
     height: 700px;
 }
