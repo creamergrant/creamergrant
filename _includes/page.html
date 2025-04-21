@@ -1,0 +1,66 @@
+---
+layout: base
+---
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg" role="navigation">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <a class="header-button" href="/">Home</a>
+          <a class="header-button" href="/projects">Projects</a>
+          <a class="header-button" href="/resume">Resume</a>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="swup" class="transition-fade">
+    
+    {{ content }}
+
+    <footer style="background-color: #B86F52; color: white; text-align: center; padding: 20px; margin-top: 50px; width: 100%; position: relative; bottom: 0;">
+      <p>&copy; 2025 Grant Creamer. All rights reserved.</p>
+      <p>
+        <a href="https://www.linkedin.com/in/creamergrant" target="_blank" rel="noopener noreferrer" style="color: #393D3F; text-decoration: none;">LinkedIn</a> |
+        <a href="https://github.com/creamergrant" target="_blank" rel="noopener noreferrer" style="color: #393D3F; text-decoration: none;">Git Hub</a> |
+        <a href="https://creamergrant.itch.io/" target="_blank" rel="noopener noreferrer" style="color: #393D3F; text-decoration: none;">Itch</a> |
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=creamergrant@gmail.com" target="_blank" rel="noopener noreferrer" style="color: #393D3F; text-decoration: none;">Email</a>
+      </p>
+    </footer>
+</main>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.header-button');
+
+    // Add click event listener to each button
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        buttons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        localStorage.setItem('activeButton', this.getAttribute('href'));
+      });
+    });
+
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+
+    const activeButtonHref = localStorage.getItem('activeButton');
+    
+
+    buttons.forEach(button => {
+      const buttonPath = button.getAttribute('href').replace(/\/$/, ""); 
+
+      if (buttonPath === currentPath || buttonPath === activeButtonHref) {
+        button.classList.add('active');
+      }
+    });
+  });
+</script>
