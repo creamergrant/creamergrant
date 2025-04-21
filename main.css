@@ -1,3 +1,32 @@
 body {
     background-color: #252525;
 }
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgb(12, 12, 12);
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.header-button {
+    
+    font-size: .5em;
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 7px 12px;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 0%, 98%);
+    background: #252525;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 5px 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
