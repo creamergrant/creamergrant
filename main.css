@@ -264,7 +264,7 @@ main {
 .panel-block-content {
     border-radius: 19px;
     background: #657ED4;
-    width: auto;
+    width: 100%;
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 2em;
@@ -326,7 +326,7 @@ main {
 }
 
 .content-block {
-    width: auto;
+    width: 100%;
     max-width: 1000px;
     border-radius: 19px;
     background: #657ED4;
@@ -336,7 +336,7 @@ main {
 
 @media (max-width: 768px) {
     .content-block {
-        width: auto;
+        width: 100%;
         margin-left: -1em;
     }
 }
