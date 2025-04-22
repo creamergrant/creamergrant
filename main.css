@@ -9,6 +9,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .site-header {
@@ -84,9 +85,9 @@ main {
     text-align: center;
     padding: 20px;
     margin-top: 50px;
-    width: 100%;
     position: relative;
     bottom: 0;
+    width: auto;
 }
 
 .footer p {
@@ -126,13 +127,13 @@ main {
     place-items: center;
     align-content: center;
     min-height: 75vh;
-    min-width: 100%;
+    min-width: auto;
     margin: 0;
     padding: 0;
 }
 @media (max-width: 768px) {
     section {
-        min-width: 100%;
+        min-width: auto;
     }
 }
 @media (max-width: 768px) {
@@ -152,7 +153,7 @@ main {
     }
   
     section {
-      min-width: 100%; /* keep it from overflowing */
+      min-width: auto; /* keep it from overflowing */
       padding: 2em 1em;
     }
 }
@@ -178,7 +179,7 @@ main {
     place-items: center;
     align-content: center;
     min-height: 60vh; /* Default height */
-    min-width: 100%;
+    min-width: auto;
     z-index: 0;
     padding-top: 2em; /* Adds padding for spacing */
     padding-bottom: 2em;
@@ -233,7 +234,7 @@ main {
     flex-direction: column;
     justify-content: left;
     max-width: 1200px;
-    width: 100%;
+    width: auto;
     padding-top: 1.25em;
     padding-bottom: 1.25em;
 }
@@ -250,7 +251,7 @@ main {
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    width: 100%;
+    width: auto;
     padding-bottom: 2.5em;
 }
 
@@ -263,7 +264,7 @@ main {
 .panel-block-content {
     border-radius: 19px;
     background: #657ED4;
-    width: 100%;
+    width: auto;
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 2em;
@@ -325,7 +326,7 @@ main {
 }
 
 .content-block {
-    width: 100%;
+    width: auto;
     max-width: 1000px;
     border-radius: 19px;
     background: #657ED4;
@@ -335,12 +336,13 @@ main {
 
 @media (max-width: 768px) {
     .content-block {
+        width: auto;
         margin-left: -1em;
     }
 }
 
 .content-block li {
-    width: 100%;
+    width: auto;
     max-width: 1000px;
 }
 
@@ -349,11 +351,11 @@ main {
 }
 
  .post-list li {
-    width: 100%;
+    width: auto;
  }
 
  .post-list .content-block {
-    width: 100%;
+    width: auto;
  }
 
  .post-list .content-block h2 {
